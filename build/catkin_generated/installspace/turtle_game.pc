@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: turtle_game
+Description: Description of turtle_game
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

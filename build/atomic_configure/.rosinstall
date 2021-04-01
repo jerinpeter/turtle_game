@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/jerin/catkin_ws/src/turtle_game/build/devel/setup.sh

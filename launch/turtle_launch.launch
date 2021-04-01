@@ -1,0 +1,8 @@
+<launch>
+<node name = "turtlesim" pkg = "turtlesim" type = "turtlesim_node" output= "screen"/>
+<node name = "game" pkg = "turtle_game" type = "follow_line" output = "screen"/>
+<node name = "vel" pkg = "turtlesim" type = "turtle_teleop_key" output = "screen"/>
+<param name = "turtlesim/background_b" value = "0" type = "int"/>
+<param name = "turtlesim/background_r" value = "0" type = "int"/>
+<param name = "turtlesim/background_g" value = "0" type = "int"/>		
+</launch>
