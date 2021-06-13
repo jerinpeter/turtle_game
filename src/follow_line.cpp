@@ -81,9 +81,9 @@ while(ros::ok())
 {
  //if((pencolor_r=0)&&(pencolor_g=0)&&(pencolor_b=0)){
 if((pencolor_r!=255)&&(pencolor_r!=255))
-cout<<"Ayoo I am out of LINE!!!"<<endl<<endl;
+cout<<"Ayoo I am out of LINE!!!"<<endl<<endl; 
 else
-system("clear");
+system("clear"); // clearing the terminal
 
  
 ros::spinOnce();
