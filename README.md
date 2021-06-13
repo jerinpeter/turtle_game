@@ -38,11 +38,16 @@ The above services where used to draw a predefined shape in the turtlsim for the
 * If the turtle when out of line a warning message is given to the user.
 
 
-
-
 ## DEMO
 
 ![Working](demo/demo.gif)
+
+
+## Improvements 
+
+* Room for addition of more shapes and complex shapes to drive the turtle around.
+
+* Different levels with the ability to adjust thickness of the line using the "width" parameter in "/turtle1/set_pen" service.
 
 ## Reference
 
