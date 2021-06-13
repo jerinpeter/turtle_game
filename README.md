@@ -25,3 +25,24 @@ catkin_make
 roslaunch turtle_launch.launch
 
 ```
+## Working in brief
+
+* Subscribed to "/turtle1/color_sensor" topic to get the background colour of the turtle.
+
+```
+    " /turtle1/set_pen
+    "/turtle1/teleport_absolute"
+```
+The above services where used to draw a predefined shape in the turtlsim for the user to drive the robot.
+
+* If the turtle when out of line a warning message is given to the user.
+
+
+## Improvements 
+
+* Room for addition of more shapes and complex shapes to drive the turtle around.
+
+* Different levels with the ability to adjust thickness of the line using the "width" parameter in "/turtle1/set_pen" service.
+
+
+
