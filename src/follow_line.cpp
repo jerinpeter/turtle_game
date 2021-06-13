@@ -12,7 +12,7 @@
 using namespace std;
 ros::Publisher my_pub;
 int pencolor_r,pencolor_g,pencolor_b;
-void color_cb(const turtlesim::Color::ConstPtr&colorsense)
+void color_cb(const turtlesim::Color::ConstPtr&colorsense)    // background color callback function
 {
  pencolor_r =  colorsense->r;
  pencolor_g = colorsense->g;
@@ -22,17 +22,20 @@ void color_cb(const turtlesim::Color::ConstPtr&colorsense)
 
 int main(int argc, char** argv)
 {   
-    ros::init(argc,argv,"game");
-    ros::NodeHandle nh;
+   ros::init(argc,argv,"game");        //Initialized node with name "game"
+   ros::NodeHandle nh;
 
-   ros::Subscriber sub = nh.subscribe("/turtle1/color_sensor",100,&color_cb);
+   ros::Subscriber sub = nh.subscribe("/turtle1/color_sensor",100,&color_cb);     //colour sensor topic gives the background color of the turtle
 
-   ros::service::waitForService("/turtle1/teleport_absolute");
-   ros::service::waitForService("/turtle1/set_pen");
+   ros::service::waitForService("/turtle1/teleport_absolute");     // teleoport service for drawing the shape
+   ros::service::waitForService("/turtle1/set_pen");       // 
+
    ros::ServiceClient pen = nh.serviceClient<turtlesim::SetPen>("/turtle1/set_pen");
    ros::ServiceClient teleporter = nh.serviceClient<turtlesim::TeleportAbsolute>("turtle1/teleport_absolute");
+   
    turtlesim::TeleportAbsolute pos;
    turtlesim::SetPen setpen;
+   // the following commands are pretty straight forward,just making the turle move in a square by giving x,y and theta values
    setpen.request.r = 255;
    setpen.request.g = 255;
    setpen.request.b = 0;
