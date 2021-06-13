@@ -38,11 +38,18 @@ The above services where used to draw a predefined shape in the turtlsim for the
 * If the turtle when out of line a warning message is given to the user.
 
 
-## Improvements 
 
-* Room for addition of more shapes and complex shapes to drive the turtle around.
 
-* Different levels with the ability to adjust thickness of the line using the "width" parameter in "/turtle1/set_pen" service.
+## DEMO
 
+![Working](demo/demo.gif)
+
+## Reference
+
+* [ROS wiki TurtleSim](http://wiki.ros.org/turtlesim)
+
+* [ROS Service](http://wiki.ros.org/rosservice)
+
+* [Launch file creation](http://wiki.ros.org/roslaunch)
 
 
